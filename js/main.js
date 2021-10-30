@@ -1,3 +1,6 @@
+
+
+
 //Declaración de variables
 var cadena, cod, respuesta;
 
