@@ -1,0 +1,133 @@
+.navbar{
+    border-bottom: solid 1px rgb(189, 188, 188);
+    position: fixed;
+    z-index: 1;
+    /* width: 100%; */
+    background:rgb(148, 156, 128);
+    margin-top: -30px;
+    width:100%;
+    
+   
+    
+}
+
+
+.nav-link {
+    font-size: 1.2em;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+ 
+/* body{
+    background: rgb(214, 211, 211);
+   
+} */
+
+
+h1, h3, p{
+   font-family: 'Kaushan script','Nunito sans';
+   color: grey;
+}
+
+h3{
+    font-size: 1.2em;
+    margin-top: 20px;
+   
+}
+
+h1{
+    color:black;
+    padding-left: 40px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding-top: 120px;
+}
+.mutante{
+    color: red;
+    font-size: 35px;
+}
+.normal{
+ color: black;
+ font-size: 35px;
+}
+
+
+.blanc{
+    color: white;
+    font-size: 35px;
+}
+
+label, #submit{
+    font-family: 'Kaushan script','Nunito sans';
+    text-transform: uppercase;
+    font-size: 10px;
+
+}
+
+#logo{
+
+    width: 70px;
+    height: 70px;
+}
+
+#imagen{
+
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.instructions{
+    padding-left: 50px;
+ 
+}
+@media screen and (min-width:641px){
+  form{
+    margin-left: 25%; 
+    margin-right:25%;
+  }   
+   
+  }
+  
+  @media screen and (max-width:640px){
+    form{margin-left: 20%; 
+    margin-right:20%;
+  }}
+
+#submit{
+
+    margin-top: 15px;
+    background-color: rgb(45, 51, 35);
+    text-transform: uppercase;
+    font-size: 15px;
+    
+    transition: 0.4s;
+   
+    
+}
+
+#button :hover{
+    color: rgb(177, 171, 171);
+}
+
+label{
+    margin-top: 10px;
+}
+
+.resultat{font-family: 'Kaushan script','Nunito sans';
+
+}
+
+.resultat, .hexagramme, .hexa{
+    text-align: center;
+    color: black;
+}
+
+.contact{
+    padding-left: 110px;
+}
+
+a.lien{
+    color:rgb(52, 92, 92);
+    text-decoration: none;
+}
