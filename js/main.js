@@ -37,7 +37,7 @@ function evaluarExpresion() {
   if (lumiere.test(cadena) == true && cote.test(cadena)) {
     cod = 3;
   };
-  if (accent.test(cadena) == true && pas.test(cadena) && comprend.test(cadena)== true) {
+  if (accent.test(cadena) == true && pas.test(cadena) && comprend.test(cadena) == true) {
     cod = 4;
   };
   if (accent.test(cadena) == true && petit.test(cadena) == true) {
@@ -62,7 +62,7 @@ function responder() {
 
 
   switch (cod) {
-    
+
     case 1:
       if (r == 1) {
         mensaje = "            Jojo: ça sert a rien!";
@@ -92,13 +92,14 @@ function responder() {
     case 5:
       mensaje = "             Jojo: C'est un grand accent!";
       break;
-    
+
     case 6:
-        mensaje = "             Jojo: Mettez votre casque et sortez doucement par la porte du milieu";
-        break;
+      mensaje = "             Jojo: Mettez votre casque et sortez doucement par la porte du milieu";
+      break;
+
     case 7:
-        mensaje = "             Jojo: Bandela s'en occupe mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
-        break;
+      mensaje = "             Jojo: Bandela s'en occupe mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
+      break;
 
     case 8:
       break;
