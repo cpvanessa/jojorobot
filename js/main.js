@@ -106,7 +106,7 @@ function responder() {
       break;
 
     case 8:
-      mensaje = "             Jojo: Les portes s'ouvrent seules, avancez, coignez-vous la gueule s'il faut";
+      mensaje = "             Jojo: Les portes s'ouvrent seules, avancez, cognez-vous la gueule s'il faut";
       break;
 
     case 9:
