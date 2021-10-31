@@ -6,7 +6,6 @@ var cadena, cod, respuesta;
 var cote = RegExp("(GAUCHE|DROITE|COTE)");
 var quoi = RegExp("(QUOI|QU'EST)");
 var lumiere = RegExp("(LUMIERE|BLUE|VERT|JAUNE)");
-
 var nettoyer = RegExp("(NETTOYES|DESINFECTES|PROPRES)");
 var accent = RegExp("(ACCENT|ORIGINE)");
 var petit = RegExp("(PETIT|FORT|JOLI)");
@@ -17,7 +16,7 @@ var pas = RegExp("(PAS|RIEN)");
 function evaluarExpresion() {
   cadena = "Visiteur: " + document.getElementById("txtPregunta").value;
   escribirChat(cadena);
-  cadena = cadena.toUpperCase();
+  cadena = cadena.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");;
   document.getElementById("txtPregunta").value = "";
   cod = 0;
 
@@ -34,8 +33,11 @@ function evaluarExpresion() {
   if (lumiere.test(cadena) == true && cote.test(cadena)) {
     cod = 3;
   };
-  if (accent.test(cadena) == true && petit.test(cadena) == true) {
+  if (accent.test(cadena) == true && pas.test(cadena) && comprend.test(cadena)== true) {
     cod = 4;
+  };
+  if (accent.test(cadena) == true && petit.test(cadena) == true) {
+    cod = 5;
   };
   //Lama a responder
   setTimeout(responder, 1000);
@@ -66,7 +68,7 @@ function responder() {
       break;
 
     case 2:
-      mensaje = "             Jojo: Oui, on les nettoie avec nous fluides corporels!";
+      mensaje = "             Jojo: Oui, on les nettoie avec nous fluides corporels! ";
       break;
 
     case 3:
@@ -78,10 +80,13 @@ function responder() {
       break;
 
     case 5:
+      mensaje = "             Jojo: C'est un grand accent!";
+      break;
 
+    case 6:
       break;
     default:
-      mensaje = "Je ne comprend pas";
+      mensaje = "             Jojo: Je ne comprend pas";
 
   }
   //document.getElementById("respuesta").innerHTML = mensaje;
