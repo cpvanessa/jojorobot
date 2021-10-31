@@ -14,6 +14,7 @@ var pas = RegExp("(PAS|RIEN)");
 var casque = RegExp("(CASQUE|CASQUES|CONFIDENT|AUDIOGUIDE|AUDIO GUIDE)");
 var fonctionner = RegExp("(FONCTIONNE|FONCTIONNER|FONCTIONNENT|MARCHER|MARCHENT|MARCHE)");
 var groupes = RegExp("(GROUPE|GROUPES|BANDELA)");
+var portes = RegExp("(PORTE|PORTES|OUVRENT|OUVRE)");
 
 
 
@@ -48,6 +49,9 @@ function evaluarExpresion() {
   };
   if (groupes.test(cadena) == true) {
     cod = 7;
+  };
+  if (portes.test(cadena) == true) {
+    cod = 8;
   };
   //Lama a responder
   setTimeout(responder, 1000);
@@ -90,7 +94,7 @@ function responder() {
       break;
 
     case 5:
-      mensaje = "             Jojo: C'est un grand accent!";
+      mensaje = "             Jojo: C'est un grand et moche accent!";
       break;
 
     case 6:
@@ -102,6 +106,10 @@ function responder() {
       break;
 
     case 8:
+      mensaje = "             Jojo: Les portes s'ouvrent seules, avancez, coignez-vous la gueule s'il faut";
+      break;
+
+    case 9:
       break;
     default:
       mensaje = "             Jojo: Je ne comprend pas";
