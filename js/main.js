@@ -11,6 +11,9 @@ var accent = RegExp("(ACCENT|ORIGINE)");
 var petit = RegExp("(PETIT|FORT|JOLI)");
 var comprend = RegExp("(COMPREND|COMPRENDS|COMPRENONS)");
 var pas = RegExp("(PAS|RIEN)");
+var casque = RegExp("(CASQUE|CASQUES|CONFIDENT|AUDIOGUIDE|AUDIO GUIDE)");
+var fonctionner = RegExp("(FONCTIONNE|FONCTIONNER|FONCTIONNENT|MARCHER|MARCHENT|MARCHE)");
+
 
 
 function evaluarExpresion() {
@@ -38,6 +41,9 @@ function evaluarExpresion() {
   };
   if (accent.test(cadena) == true && petit.test(cadena) == true) {
     cod = 5;
+  };
+  if (fonctionner.test(cadena) == true && pas.test(cadena) == true) {
+    cod = 6;
   };
   //Lama a responder
   setTimeout(responder, 1000);
@@ -82,8 +88,12 @@ function responder() {
     case 5:
       mensaje = "             Jojo: C'est un grand accent!";
       break;
-
+    
     case 6:
+        mensaje = "             Jojo: Mettez votre casque et sortez doucement par la porte du milieu";
+        break;
+
+    case 7:
       break;
     default:
       mensaje = "             Jojo: Je ne comprend pas";
