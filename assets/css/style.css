@@ -10,13 +10,14 @@
    
     
 }
-
+  
 
 .nav-link {
     font-size: 1.2em;
     margin-right: 10px;
     margin-left: 10px;
 }
+
 
  
 /* body{
@@ -66,12 +67,14 @@ label, #submit{
 }
 
 #logo{
+    width: 1502x;
+    height: 123px;
+    margin-top:-10px;
+    margin-bottom: -25px;
 
-    width: 70px;
-    height: 70px;
 }
 
-#imagen{
+#imagenlogo{
 
     margin-top: 20px;
     margin-left: 50px;
