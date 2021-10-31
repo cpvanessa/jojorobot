@@ -98,7 +98,7 @@ function responder() {
       break;
 
     case 7:
-      mensaje = "             Jojo: Bandela s'en occupe ";
+      mensaje = "             Jojo: Bandela s'en occupe mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
       break;
 
     case 8:
