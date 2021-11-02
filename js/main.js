@@ -17,6 +17,10 @@ var casque = RegExp("(CASQUE|CASQUES|CONFIDENT|AUDIOGUIDE|AUDIO GUIDE)");
 var fonctionner = RegExp("(FONCTIONNE|FONCTIONNER|FONCTIONNENT|MARCHER|MARCHENT|MARCHE)");
 var groupes = RegExp("(GROUPE|GROUPES|BANDELA)");
 var portes = RegExp("(PORTE|PORTES|OUVRENT|OUVRE)");
+var billets = RegExp("(BILLET|BILLETS|TICKET|TICKETS|RESERVATION|RESERVATIONS|RESERVE)");
+var nombre = RegExp("(1|2|3|4|5|6|UN|DEUX|TROIS|QUATRE|CINQ|SIX)");
+var faire = RegExp("(FAIRE|FAIS|FAIT|TOUCHE|TOUCHER)");
+var salutation = RegExp("(BONJOUR|BONSOIR)");
 
 
 
@@ -55,6 +59,12 @@ function evaluarExpresion() {
   if (portes.test(cadena) == true) {
     cod = 8;
   };
+  if (salutation.test(cadena) == true) {
+    cod = 9;
+  };
+  if (faire.test(cadena) == true && quoi.test(cadena)) {
+    cod = 10;
+  };
   //Lama a responder
   setTimeout(responder, 1000);
   //responder();
@@ -88,7 +98,7 @@ function responder() {
       break;
 
     case 3:
-      mensaje = "             Jojo: A gauche!";
+      mensaje = "             Jojo: La lumière à gauche!";
       break;
 
     case 4:
@@ -104,17 +114,30 @@ function responder() {
       break;
 
     case 7:
-      mensaje = "             Jojo: Bandela s' occupe  des gropes mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
+      mensaje = "             Jojo: La chatelefa Bandela s'occupe des gropes mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
       break;
 
     case 8:
       mensaje = "             Jojo: Les portes s'ouvrent seules, avancez, cognez-vous la gueule s'il faut";
       break;
-
+    
     case 9:
+        mensaje = "             Jojo: Bonjour et bienvenue à cette belle aventure";
+        break;
+    case 10:
+        mensaje = "             Jojo: Je viens de vous dire, vous faites rien, vous touchez juste le plus et le moins si vous voulez régler le son";
+        break;
+
+    case 11:
       break;
     default:
-      mensaje = "             Jojo: Je ne comprend pas";
+      if (r == 1) {
+        mensaje = "            Jojo: Je ne comprend pas, mais ne vous plaignez pas et faites attention, vous serez toujours perdant";
+
+      };
+      if (r == 2) {
+        mensaje = "             Jojo: Je ne comprend pas, reformulez votre message, on peux encore contruire des beaux souvenirs ensemble!";
+      };
 
   }
   //document.getElementById("respuesta").innerHTML = mensaje;
