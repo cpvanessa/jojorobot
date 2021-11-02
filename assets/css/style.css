@@ -134,3 +134,7 @@ a.lien{
     color:rgb(52, 92, 92);
     text-decoration: none;
 }
+
+#areaChat{
+    overflow-y: scroll
+}
