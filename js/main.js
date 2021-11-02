@@ -1,4 +1,6 @@
 
+
+  
 //Declaración de variables
 var cadena, cod, respuesta;
 
@@ -6,7 +8,7 @@ var cadena, cod, respuesta;
 var cote = RegExp("(GAUCHE|DROITE|COTE)");
 var quoi = RegExp("(QUOI|QU'EST)");
 var lumiere = RegExp("(LUMIERE|BLUE|VERT|JAUNE)");
-var nettoyer = RegExp("(NETTOYES|DESINFECTES|PROPRES|NETTOYEZ|DESINFECTEZ)");
+var nettoyer = RegExp("(NETTOYES|DESINFECTES|PROPRES|NETTOYEZ|DESINFECTEZ|LAVES|LAVE)");
 var accent = RegExp("(ACCENT|ORIGINE)");
 var petit = RegExp("(PETIT|FORT|JOLI|BEL)");
 var comprend = RegExp("(COMPREND|COMPRENDS|COMPRENONS)");
@@ -69,7 +71,7 @@ function responder() {
 
     case 1:
       if (r == 1) {
-        mensaje = "            Jojo: ça sert a rien!";
+        mensaje = "            Jojo: La lumière ça sert a rien!";
 
       };
       if (r == 2) {
@@ -102,7 +104,7 @@ function responder() {
       break;
 
     case 7:
-      mensaje = "             Jojo: Bandela s'en occupe mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
+      mensaje = "             Jojo: Bandela s' occupe  des gropes mais probablement elle ne va pas vous répondre, ou elle vous répondra l'année prochaine. En tout cas, ne vous plaignez pas, elle est bien aimée et protegée";
       break;
 
     case 8:

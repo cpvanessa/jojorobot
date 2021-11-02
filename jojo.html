@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HDM Robot</title>
@@ -9,9 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <script src="js/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="js/main.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
@@ -20,15 +21,17 @@
 
 
 
-
 </head>
 
 <body>
-
+ 
+   
+        
+   
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
 
-            <a id= "logomenu" class="navbar-brand" href="jojo.html">
+            <a id= "logomenu" class="navbar-brand" href="index.html">
                 <figure> <img id='logo' src="assets/images/fotohdn.jpg" alt="loggia hdm"></figure>
             </a>
             
@@ -39,10 +42,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="jojo.html">Accueil</a>
-                    <a class="nav-link" href="hdm.html" target="blanck">Hotel de la
+                    <a class="nav-link active" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="hdm.html">Hotel de la
                         Narine</a>
-                    <a class="nav-link active" href="chatelefas.html">Les Chatelefas<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="chatelefas.html">Les Chatelefas</a>
                     <a class="nav-link" href="contact.html">Contact</a>
 
                 </div>
@@ -52,19 +55,45 @@
 
 
     <main class="container-fluid">
-               
-        <main class="container-fluid">
-               
-            <h1>JOJO ROBOT</h1>
-            <section class="contact">
-    
-                      
-                        <p>En construction....On est sous l'eau</p>
-                        <p></p>
-                  
-                       
-    
+      
+        <h1>JOJO ROBOT</h1>
+      
+            <section class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+
+                <figure><img id='imagenlogo' src="assets/images/logohmn.jpg" alt="logo hdm"></figure>
+                <article class="instructions">
+                    <p></p>
+                    <p></p>
+                </article>
             </section>
+            <img id="avatar" src="assets/images/jojoavatar.jpg" width="60" height="65" alt="Jojo avatar">
+
+            <section id="chat" class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+
+
+                <textarea id="areaChat" rows="10" cols="30">
+
+                </textarea>
+                <p>
+                    <input type="text" placeholder="Ecrivez votre message" name="name" value="" id="txtPregunta" size="46">
+                    <input type="button" name="name" value="Envoyer" onclick="evaluarExpresion()">
+                </p>
+                
+                <!-- <p id="resultado1">
+
+                </p>
+                <p id="resultado2">
+                </p>
+                <p id="respuesta">
+
+                </p> -->
+
+            </section>
+
+
+
+        </section>
+
 
 
 
@@ -90,13 +119,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <script>
-
-    </script>
+   
 
 </body>
 
 </html>
-
-
-   
