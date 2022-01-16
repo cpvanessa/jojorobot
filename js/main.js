@@ -1,5 +1,3 @@
-
-
   
 //Declaración de variables
 var cadena, cod, respuesta;
@@ -20,7 +18,7 @@ var portes = RegExp("(PORTE|PORTES|OUVRENT|OUVRE)");
 var billets = RegExp("(BILLET|BILLETS|TICKET|TICKETS|RESERVATION|RESERVATIONS|RESERVE)");
 var nombre = RegExp("(1|2|3|4|5|6|UN|DEUX|TROIS|QUATRE|CINQ|SIX)");
 var faire = RegExp("(FAIRE|FAIS|FAIT|TOUCHE|TOUCHER)");
-var salutation = RegExp("(BONJOUR|BONSOIR)");
+var salutation = RegExp("(BONJOUR|BONSOIR|SALUT|CA VA|ça va)");
 
 
 
@@ -94,7 +92,7 @@ function responder() {
       break;
 
     case 2:
-      mensaje = "             Jojo: Oui, on les nettoie avec nous fluides corporels! ";
+      mensaje = "             Jojo: Oui, on les nettoie avec nos fluides corporels! ";
       break;
 
     case 3:
@@ -136,7 +134,7 @@ function responder() {
 
       };
       if (r == 2) {
-        mensaje = "             Jojo: Je ne comprend pas, reformulez votre message, on peux encore contruire des beaux souvenirs ensemble!";
+        mensaje = "             Jojo: Je ne comprend pas, reformulez votre message, on peut encore contruire des beaux souvenirs ensemble!";
       };
 
   }

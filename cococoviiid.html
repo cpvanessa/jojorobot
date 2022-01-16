@@ -72,30 +72,31 @@
 
             <section>
                 <section>
-                    <button class="button-55" id="color1" onclick="changecolor1();">Manger à 1m59 de tes
+                   
+                    <button class="button-55" id="color1" onclick="cambiarColor(this.id);">Manger à 1m59 de tes
                         collègues</button>
-                    <button class="button-55" id="color2" onclick="changecolor2();">Partager des bonbons avec
+                    <button class="button-55" id="color2" onclick="cambiarColor(this.id);">Partager des bonbons avec
                         l'équipe</button>
                 </section>
-                <section> <button class="button-55" id="color3" onclick="changecolor3();">Faire des évenements
+                <section> <button class="button-55" id="color3" onclick="cambiarColor(this.id);">Faire des évenements
                         conviviaux</button>
-                    <button class="button-55" id="color4" onclick="changecolor4();">Mettre des cuillères dans les
+                    <button class="button-55" id="color4" onclick="cambiarColor(this.id);">Mettre des cuillères dans les
                         oreilles</button>
                 </section>
 
             </section>
             <br>Trouve les résultats de ton irresponsabilité:<br>
-            <section class="cluster"><i class='fas fa-virus fa-spin fa-5x '></i><input type="button" value="Get Cluster "
-                    onclick="postmessage();" /></section>
-            <section class="cluster"><input type="submit" value="Clear Cluster" onClick="clearCluster();"/>
+            <section class="cluster"><i class='fas fa-virus fa-spin fa-5x '></i><input type="button"
+                    value="Get Cluster " onclick="postmessage();" /></section>
+            <section class="cluster"><input type="submit" value="Clear Cluster" onClick="clearCluster();" />
 
-        </section>
+            </section>
 
-        <div id="cluster">
+            <div id="cluster">
 
-        </div>
+            </div>
 
-        <div id="variant"></div>
+            <div id="variant"></div>
 
 
     </main>
@@ -104,7 +105,7 @@
 
     <!-- script js -->
     <script>
-
+      
 
 
 
@@ -138,7 +139,7 @@
             console.log(rand)
             return rand;
 
-        }
+        };
 
         function postmessage() {
 
@@ -146,26 +147,98 @@
 
             document.getElementById("variant").textContent = "La variant est: " + maVariant();
         };
-        
+
         function clearCluster() {
             window.location.reload();
+        };
+
+      
+    function cambiarColor(boubou) {
+
+        console.log(boubou);
+        var button = document.getElementById(boubou)
+        var couleur_fond= getComputedStyle(button).backgroundColor;
+
+        if (couleur_fond  !== 'rgb(255, 255, 255)') {
+
+            button.style.backgroundColor = 'rgb(255, 255, 255)';
+            
+            
         }
+            
+
+        else if (couleur_fond === 'rgb(255, 255, 255)') {
+
+            button.style.backgroundColor = "rgb(242, 47, 47)";
+        }
+
+
+    }
+
+     /* function changecolor1() {
+
+            //var button = document.getElementById("color1");
+            //var couleur_fond = getComputedStyle(button) backgroundColor;
+            var couleur_fond = boubou.style.backgroundColor;
+           
+            
+            if (couleur_fond  !== 'rgb(255, 255, 255)') {
+
+               document.getElementbyId("color1").style.backgroundColor = 'rgb(255, 255, 255)';
+                
+                
+            }
+                
+
+            else if (couleur_fond === 'rgb(255, 255, 255)') {
+
+                document.getElementbyId("color1").style.backgroundColor  = "rgb(242, 47, 47)";
+            }
+            console.log("changecolor1");
+        };
+*/
+        let mouseOver1 = document.getElementById('color1')
+        
+
+        mouseOver1.addEventListener('mouseover', () =>{
+            mouseOver1.innerHTML="Inconscient!";
+        })
+        mouseOver1.addEventListener('mouseout', () =>{
+            mouseOver1.innerHTML='Manger à 1m59 de tes collègues';
+        })
+     
        
 
-        function changecolor1() {
+        let mouseOver2 = document.getElementById('color2')
+       
 
-            document.getElementById("color1").style.background = 'rgb(242, 47, 47)';
-        };
-        function changecolor2() {
+        mouseOver2.addEventListener('mouseover', () =>{
+            mouseOver2.innerHTML="Irresponsable!";
+        })
+        mouseOver2.addEventListener('mouseout', () =>{
+            mouseOver2.innerHTML="Partager des bonbons avec l'équipe";
+        })
+        
 
-            document.getElementById("color2").style.background = 'rgb(242, 47, 47)';
-        };
-        function changecolor3() {
-            document.getElementById("color3").style.background = 'rgb(242, 47, 47)';
-        };
-        function changecolor4() {
-            document.getElementById("color4").style.background = 'rgb(242, 47, 47)';
-        };
+        let mouseOver3 = document.getElementById('color3')
+       
+
+        mouseOver3.addEventListener('mouseover', () =>{
+            mouseOver3.innerHTML="Téméraire!";
+        })
+        mouseOver3.addEventListener('mouseout', () =>{
+            mouseOver3.innerHTML='Faire des évenements conviviaux';
+        })
+        
+        let mouseOver4 = document.getElementById('color4')
+       console.log(mouseOver4);
+
+        mouseOver4.addEventListener('mouseover', () =>{
+            mouseOver4.innerHTML="Inconscient!";
+        })
+        mouseOver4.addEventListener('mouseout', () =>{
+            mouseOver4.innerHTML='Mettre des cuillères dans les oreilles';
+        })
 
     </script>
 
